@@ -1,0 +1,58 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    background-color: purple;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    animation: slide 20s infinite;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-100%); }
+    60% { transform: translateX(-200%); }
+    80% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+.checkbox-question {
+    margin: 10px 0;
+}
+
+.final-card {
+    background-color: purple;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.final-card:hover {
+    transform: scale(1.05);
+}

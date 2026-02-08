@@ -1,0 +1,36 @@
+.carousel {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    height: 100%;
+    --scroll-shift: 0px; /* set by JS to half the full track width */
+    animation: scroll 40s linear infinite;
+    will-change: transform;
+}
+
+.carousel-item {
+    min-width: 520px;
+    height: 320px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0.9) contrast(0.95);
+    transform: translateZ(0);
+}
+
+.carousel:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(var(--scroll-shift) * -1)); }
+}
